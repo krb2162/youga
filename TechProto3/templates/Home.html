@@ -1,0 +1,78 @@
+<head>
+
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+		<title>Welcome back to Youga</title>
+
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"> 
+		</script>
+		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+
+	</head>
+
+
+
+
+
+<script type="text/javascript" src="{{ url_for('static', filename = 'Home.js') }}"></script>
+<style type="text/css">
+.btn {
+	margin-top: 20%;
+  
+  	margin-left: 10%; 
+}
+#logo
+{
+	margin-left: 100px
+}
+#logosaying
+{
+	position: absolute;
+	margin-left: -60px;
+
+
+}
+.top
+{
+
+}
+.middle
+{
+	padding-bottom: 25%;
+
+}
+.bottom
+{
+	/*padding-top: 30px;*/
+	padding-bottom: 45%;
+	background: #466368;
+  	background: -webkit-linear-gradient(#cce6ff, #ffffe6);
+  	background:    -moz-linear-gradient(#cce6ff, #ffffe6);
+  	background:         linear-gradient(#cce6ff, #ffffe6);
+}
+
+</style>
+
+
+	<div class="container">
+		<!-- <div class = "row top">
+		</div>
+		<div class = "row middle">
+			src="/images/html5.gif"
+		</div> --><img id = "logo" src="https://pbs.twimg.com/media/D5mIrb8XkAAIutZ.jpg" alt="Youga clever logo" style="height:300px;">
+				<img id = "logosaying" src="https://pbs.twimg.com/media/D5mLv1kWsAUDFPs.png" alt="Yoga classes designed by you, curated by you" style="height:250px;">
+		<div class = "row bottom">
+			<button class ='btn btn-outline-primary' id='Take'>Take Prototype Yoga Class</button>
+
+			<button class ='btn btn-outline-primary Create'>Create Your Yoga Class</button>
+			<button class ='btn btn-outline-primary View'>View Your Yoga Classes</button>
+		</div>
+	</div>
+

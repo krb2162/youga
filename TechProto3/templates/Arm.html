@@ -1,0 +1,169 @@
+{% extends 'layout.html' %}
+
+{% block scripts %}
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script type="text/javascript" src="{{ url_for('static', filename = 'Arm.js') }}"></script>
+    <script src = "Arm.js"></script>
+
+    <script>
+
+        var Arm = {{Arm|tojson}}
+    </script>
+    
+    <style type="text/css">
+      .container
+      {
+        padding-bottom: 25%;
+        background: #466368;
+        background: -webkit-linear-gradient(#cce6ff, #ffffe6);
+        background:    -moz-linear-gradient(#cce6ff, #ffffe6);
+        background:         linear-gradient(#cce6ff, #ffffe6);
+        /*padding-left: 100%;*/
+        /*padding-right: 100%;*/
+
+      }
+      #name
+      {
+        padding-left: 30px;
+        padding-top: 65px;
+        font-weight: bolder;
+        padding-bottom: 5px
+      }
+
+      .topbar{
+        
+        padding: 3%;
+        /*margin-bottom: 2%;*/
+        color: #0080ff;
+      }
+      .vest
+      {
+        display: inline-block;
+        /*background-color: red;*/
+      }
+      .ui-widget{
+      background-color: lightgrey;
+      width:10%;
+      }
+      .row{
+        margin-bottom: 1%;
+      }
+      .blue{
+        color: blue;
+      }
+      #keyword
+      {
+        font-weight: bold;
+        /*background-color: lightblue;*/
+      }
+      #check
+      {
+        font-size: 24px;
+      }
+      /*.steps
+      {
+        padding-top: 50px;
+
+      }*/
+      .placeimage
+      {
+        padding-top: 20px;
+        padding-left: 20px;
+
+      }
+      .placeimagehover
+      {
+        padding-top: 20px;
+        border: 5px solid lightblue;
+        padding-left: 20px;
+        
+      }
+      #keywordtext
+      {
+        padding-left: 20px;
+        
+        border: 3px;
+        border-color: lightblue;
+        font-size: 14px;
+        font-weight: normal;
+      }
+      .div
+      {
+        display: inline-block;
+        display: inline;
+        float: left;
+        /*position: absolute;*/
+      }
+      .selecting
+      {
+        background-color: yellow;
+      }
+      .hi
+      {
+        padding-left: 550px;
+      }
+       .vid-container
+      {
+        padding-top: 40px;
+        padding-bottom: 30px;
+      }
+      #stuff
+      {
+        padding-bottom: 10px;
+        padding-top: 70px
+      }
+      #font{font-family: serif;
+        font-size: 18px;}
+
+
+    </style>
+
+{% endblock %}
+
+
+
+{% block content %}
+
+    
+<div class="container">
+
+        <div class="topbar">
+        </div>
+
+
+
+
+        <br>
+        <div id = "stuff">
+        <div id="check"> Choose a <span id= "keyword">Arm Balance: </span></div> <span id="about"></span>
+        <div id = "font"> Arm Balances may seem scary, but they are in fact really safe, and will prove to you you are stronger and more capable than you think.  Your limits are self impozed.  </div>
+      </div>
+   <div class = "row"> 
+    <div class = "col-md-6 steps">
+        <!--<div class = "videoappend">
+        </div>--><!-- <div class= "intro">Choose a starting pose and place it here!</div> -->
+               
+
+    </div>
+  </div>
+  <div class = "row">
+
+    <div class = "col-md-8 poses">
+        <div class = "videoappend"></div>
+    </div>
+  </div>
+  <div class ="col-md-8 hi"><button class ='btn btn-primary Next'>Select Next Section</button></div>
+</div>
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

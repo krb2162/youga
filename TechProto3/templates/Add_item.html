@@ -1,0 +1,193 @@
+{% extends 'layout.html' %}
+
+{% block scripts %}
+	<script type="text/javascript" src="{{ url_for('static', filename = 'Add_item.js') }}"></script>
+
+	<script>
+		var database = {{database|tojson}} 
+	</script>
+	
+	<style type="text/css">
+	  .topbar{
+	    background-color: white;
+		padding: 3%;
+	    margin-bottom: 2%;
+	    color: lightblue;
+	  }
+	  .ui-widget{
+	  background-color: lightgrey;
+	  width:10%;
+	  }
+	  .row{
+	  	margin-bottom: 1%;
+	  }
+	  .blue{
+	  	color: blue;
+	  }
+	</style>
+
+{% endblock %}
+
+
+
+{% block content %}
+
+	
+	<div class="container">
+
+
+	    <div class="topbar">
+	      <h1>Curate Your Yoga Class!</h1>
+	    </div>
+
+ <div class="row">
+ 	<div class = "col-md-6">
+	    <div id="log">
+	    	<div class="row">
+		        <div class="col-md-3">
+		          Create a name: 
+		        </div>
+
+		        <div class="col-md-3">
+		        	<div class="ui-widget">
+		        		<input type="text" id="First_muscle" placeholder="name">
+		        	</div>
+
+		        </div>
+		         
+		         <div class="col-md-4">
+		        	<!-- <div class="videoappend">
+		        		hihihi
+		        	</div> -->
+
+		        </div>
+
+<!--
+		        <div class="col-md-3">
+		        	<input type="text" id="Last_muscle" placeholder="Last Name">
+		        </div>
+		    -->
+		    </div>
+<!-- importance_level -->
+		    <div class="row">
+		        <div class="col-md-2">
+		          mindfulness pose: 
+		        </div>
+
+		        <div class="col-md-3">
+		        	<iframe id="video1" width="200" height="150" src="">
+					</iframe>
+		        </div>
+
+		        <button class="col-md-4 btn btn-outline-secondary change1" type="button" >change</button>
+		    </div>
+
+<!-- Pains -->
+		    <div class="row">
+		        <div class="col-md-2">
+		          Integration series : beginning stretch
+		        </div>
+
+		        <div class="col-md-3">
+		        	<iframe id="video2" width="200" height="150" src="">
+					</iframe>
+		        </div>
+		        <button class="col-md-4 btn btn-outline-secondary change2" type="button" class="change">change</button>
+		    </div>
+
+<!-- pose_easy -->
+
+		    <div class="row">
+		        <div class="col-md-2">
+		          Integration series : Sun A 
+		        </div>
+
+		        <div class="col-md-3">
+		        	<iframe id="video3" width="200" height="150" src="">
+					</iframe>
+		        </div>
+		        <button class="col-md-4 btn btn-outline-secondary change3" type="button" id="change">change</button>
+		    </div>
+<!-- pose_medium -->
+		<div class="row">
+		        <div class="col-md-2">
+		          Integration series : Sun A+ 
+		        </div>
+
+		        <div class="col-md-3">
+		        	<iframe id="video4" width="200" height="150" src="">
+					</iframe>
+		        </div>
+		        <button class="col-md-4 btn btn-outline-secondary change4" type="button" id="change">change</button>
+		    </div>
+
+<!-- pose_advanced -->
+		    <div class="row">
+		        <div class="col-md-2">
+		          Core Series:
+		        </div>
+
+		        <div class="col-md-3">
+		        	<iframe id="video5" width="200" height="150" src="">
+					</iframe>
+		        </div>
+		        <button class="col-md-4 btn btn-outline-secondary change5" type="button" id="change">change</button>
+		    </div>
+		    
+<!-- usage --><div class="row">
+		        <div class="col-md-2">
+		          Core series: 
+		        </div>
+
+		        <div class="col-md-3">
+		        	<iframe id="video6" width="200" height="150" src="">
+					</iframe>
+
+		        </div>
+		        <button class="col-md-4 btn btn-outline-secondary change6" type="button" id="change">change</button>
+
+		    </div>
+<!-- Summary -->
+		    <div class="row">
+		        <div class="col-md-2">
+		          Balance Series: Pose 1 
+		        </div>
+
+		        <div class="col-md-3">
+		        	<iframe id="video7" width="200" height="150" src="">
+					</iframe>
+		        </div>
+		        <button class="col-md-4 btn btn-outline-secondary change7" type="button" id="change">change</button>
+		    </div>
+<!-- pic -->
+		    <div class="row">
+		        <div class="col-md-2">
+		          Savasana:
+		        </div>
+
+		        <div class="col-md-3">
+		        	<iframe id="video8" width="200" height="150" src="">
+					</iframe>
+		        </div>
+		        <button class="col-md-4 btn btn-outline-secondary change8" type="button" id="change">change</button>
+		    </div>
+<!-- Button -->
+		    <div class="col-md-2"> <button type="button" class="btn btn-primary btn-sm btn-block" id="Submit">Add New Entry</button></div>
+
+	    </div>
+
+	    <br>
+		<div id="check"></div>
+	</div>
+
+	<div class = "col-md-6">
+        <div class = "videoappend">
+        </div>
+    </div>
+</div>
+
+	
+</div>
+
+
+{% endblock %}

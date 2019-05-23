@@ -1,0 +1,100 @@
+{% extends 'layout.html' %}
+{% block scripts %}
+	<script type="text/javascript" src="{{ url_for('static', filename = 'Item.js') }}"></script>
+
+	<script>
+		var stats= {{stats|tojson}}
+	</script>
+	<style type="text/css">
+		.hi{
+			background-color: grey;
+			color: lightblue;
+		}
+		.line{
+			border: 1px solid;
+	        width: 1000%;
+	        margin: 0%;
+            color: lightgrey;
+            margin-top: 10px;
+	    }
+        .head_sum
+        {
+            margin-left: 100px;
+            color: grey;
+            padding-top: 70px;
+            font-size: 2em;
+
+        }
+        .head_pic
+        {
+            padding-top: 30px;
+        }
+        .Poses
+        {
+            margin-left: 150px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            font-size: 2em;
+        }
+        .Posess
+        {
+            margin-left: 55px;
+            margin-top: 30px;
+            margin-bottom: 10px;
+            font-size: 2em;
+            color: grey;
+        }
+        .summary
+        {
+            font-size: .35em;
+            margin-top: 70px;
+        }
+        .level
+        {
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        .easy
+        {
+            padding-left: 60px;
+            
+        }
+        .po
+        {
+            font-size: 1.2em;
+        }
+        .move
+        {
+            margin-left: 55px;
+        }
+        .pain
+        {
+            margin-top: 20px;
+            font-size: 1.7em;
+        }
+        .title
+        {
+            font-style:bold; 
+        }
+        .painplace
+        {
+            margin-top: 40px;
+            margin-left: -40px
+        }
+
+	</style>
+
+{% endblock %}
+{% block content %}
+<div class="hi">
+	<h1>Playing *insert your yoga class*</h1>
+</div>
+<div class="container">
+    <iframe id="video" width="400" height="300" src="https://www.youtube.com/embed/eqVMAPM00DM?playlist=-r15RxP8ZzE,hmZxKCXS0tY,yqgsm8wzcJw,k4qaVoAbeHM,IUqcLGOEzPw,5vIJX7SIiJo,n-tkEKXKZDU,VUoXdvODhws,Ahbws0nrMJg,Ahbws0nrMJg,3hT2H0mMHNQ,AiVLtDdO_kw,FVlX5HNKamw,AiVLtDdO_kw,hTeoG3H0vsM,ClE1necHjUs,WTFCMfmjnaw"
+>
+    </iframe>
+	
+</div>
+
+
+{% endblock %}

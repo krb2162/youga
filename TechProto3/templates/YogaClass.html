@@ -1,0 +1,93 @@
+{% extends 'layout.html' %}
+
+{% block scripts %}
+	<script type="text/javascript" src="{{ url_for('static', filename = 'YogaClass.js') }}"></script>
+
+	<script>
+		var database = {{database|tojson}} 
+	</script>
+	<style type="text/css">
+	.topbar{
+	background-color: white;
+	padding: 3%;
+	margin-bottom: 2%;
+	color: lightblue;
+	}
+	.container
+	{
+	background: #466368;
+  	background: -webkit-linear-gradient(#cce6ff, #ffffe6);
+  	background:    -moz-linear-gradient(#cce6ff, #ffffe6);
+  	background:         linear-gradient(#cce6ff, #ffffe6);
+  	/*padding-left: 100%;*/
+  	/*padding-right: 100%;*/
+  	padding-bottom: 40%;
+
+	}
+	.video{
+		margin-left: 250px;
+		margin-top: -100px;
+	}
+	#naming
+	{
+		padding-left: 200px;
+		padding-top: 150px;
+	}
+	.Save
+	{
+		margin-left: 200px;
+	}
+	#stuff2
+	{
+		padding-left: 0px;
+	}
+	.btn
+	{
+		margin-top: -500px;
+	}
+	#ex
+	{
+		font-size: 6px;
+	}
+	#yo
+	{
+		padding-top: 100px;
+		font-size: 32px;
+		padding-left: 50px;
+		
+	}
+
+	/* Dropdown Button */
+
+	
+	</style>
+
+{% endblock %}
+
+{% block content %}
+
+<div class = "title container"> 
+<div id = "yo">Let's name and submit your completed class:</div>
+	
+
+				<!--left side will hold prepoluated and made yoga classes-->
+				<div id = "stuff2">
+				<div id = "naming">
+				<label>Name Your Class: </label>
+          		<input type = "text"
+                 id = "myText"
+                 value = "" />
+             </div>
+             <button class ='btn btn-primary Save'>Submit</button>
+ 
+             <button class ='btn btn-outline-primary Cancel'>Cancel</button>
+             <span class = "video"> </span>
+				</div>
+
+				
+					
+		
+</div>
+
+
+{% endblock %}
